@@ -1,6 +1,9 @@
+language : php
 sudo: required
-
 services:
-	- docker
+  - docker
 script:
-	- docker build -t a-php .
+    - docker build . -t a-php
+#    - docker images
+#    - docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+#    - docker push denipermana/cicd
